@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Threading.Tasks;
 using Microsoft.IdentityModel.Clients.ActiveDirectory;
 using Microsoft.VisualStudio.Services.Client;
 using Microsoft.VisualStudio.Services.DelegatedAuthorization;
@@ -23,12 +23,13 @@ namespace NonInteractivePatGenerationSample
             //var adalCredential = new UserPasswordCredential(username, password);
 
             var authenticationContext = new AuthenticationContext("https://login.microsoftonline.com/common");
-            var result = authenticationContext.AcquireTokenAsync(VstsResourceId, aadApplicationID, new UserCredential()).Result;
+            // var aadToken = await authenticationContext.AcquireTokenSilentAsync(VstsResourceId, aadApplicationID);
+            var aadToken = await authenticationContext.AcquireTokenAsync(VstsResourceId, aadApplicationID, new UserCredential());
 
-            var token = new VssAadToken(result);
+            var token = new VssAadToken(aadToken);
             var vstsCredential = new VssAadCredential(token);
 
-            var connection = new VssConnection(new Uri("https://spsprodwcus0.vssps.visualstudio.com/A850a26fd-8300-ce32-bb6e-28e032a3a0fd"), vstsCredential);
+            var connection = new VssConnection(new Uri("https://app.vssps.visualstudio.com"), vstsCredential);
             var client = connection.GetClient<TokenHttpClient>();
 
             var pat = client.CreateSessionTokenAsync(

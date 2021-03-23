@@ -1,0 +1,21 @@
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Length: 15567
+Content-Type: application/json; charset=utf-8; api-version=6.0
+Expires: -1
+P3P: CP="CAO DSP COR ADMa DEV CONo TELo CUR PSA PSD TAI IVDo OUR SAMi BUS DEM NAV STA UNI COM INT PHY ONL FIN PUR LOC CNT"
+Set-Cookie: VstsSession=%7B%22PersistentSessionId%22%3A%228f94eead-b8ab-4f6e-baad-1ca6305ac248%22%2C%22PendingAuthenticationSessionId%22%3A%2200000000-0000-0000-0000-000000000000%22%2C%22CurrentAuthenticationSessionId%22%3A%2200000000-0000-0000-0000-000000000000%22%2C%22SignInState%22%3A%7B%7D%7D;SameSite=None; domain=.dev.azure.com; expires=Wed, 11-Mar-2026 22:19:19 GMT; path=/; secure; HttpOnly
+X-TFS-ProcessId: 84b69ff7-256d-40c8-b68c-2ebc3798555b
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+ActivityId: f2890fe3-1a69-4ef0-8f38-3eee4c52de9c
+X-TFS-Session: f2890fe3-1a69-4ef0-8f38-3eee4c52de9c
+X-VSS-E2EID: f2890fe3-1a69-4ef0-8f38-3eee4c52de9c
+X-VSS-UserData: 02225015-5fb7-47c0-8811-71edf56176bd:jerick@microsoft.com
+X-FRAME-OPTIONS: SAMEORIGIN
+Request-Context: appId=cid-v1:5fe3aaf3-76f3-4008-829d-882462bbf13e
+Access-Control-Expose-Headers: Request-Context
+X-Content-Type-Options: nosniff
+X-MSEdge-Ref: Ref A: F5F4795916434672ADCFD39A859DF028 Ref B: WSTEDGE1011 Ref C: 2021-03-12T22:19:19Z
+Date: Fri, 12 Mar 2021 22:19:18 GMT
+
